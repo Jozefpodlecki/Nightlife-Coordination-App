@@ -10,12 +10,12 @@ module.exports = {
   },
   output: {
     publicPath: '/',
-    path: path.resolve(__dirname, 'dist'),
+    path: __dirname,
     filename: "[name].bundle.js",
   },
   devtool: 'source-map',
   devServer: {  
-    contentBase: './dist',  
+    contentBase: './',  
     overlay: true
   },  
   resolve: {  
