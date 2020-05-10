@@ -1,0 +1,11 @@
+navbar.navbar
+    span.navbar__action(data-bind="click: goToHome")
+        i.fas.fa-home.fa-2x
+    span.navbar__action(data-bind="hidden: loggedIn, click: goToSignIn")
+        i.fas.fa-sign-in-alt.fa-2x
+    span.navbar__action(data-bind="visible: loggedIn, click: signOut")
+        i.fas.fa-sign-out-alt.fa-2x
+    span.navbar__action(data-bind="visible: loggedIn && assignedToBar, click: goToAssignedBar")
+        i.fas.fa-utensils.fa-2x
+    span.navbar__action(data-bind="visible: loggedIn, click: goToHistory")
+        i.fas.fa-clock.fa-2x

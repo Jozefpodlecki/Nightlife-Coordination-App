@@ -1,0 +1,76 @@
+$white = white;
+$black = black;
+
+.bars
+    height 100%
+   
+    &__search
+        
+
+    &__searchInput
+        text-align center
+        color $white
+        //width 100%
+        background: transparent
+        padding .5rem
+        transition color .3s ease-in
+        border none
+        font-size 2rem
+
+        &::placeholder
+            color $white
+
+        &:focus
+            outline: none
+
+.list
+    height 100%
+    display flex
+    flex-wrap wrap
+    
+    overflow-y scroll
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 8px;
+        background-color: #FFFFFF44
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #FFFFFF99; 
+    }
+
+
+.item
+    margin .5rem
+    padding .5rem
+    flex 0 0 300px
+    height 300px
+    background #FFFFFF44
+    display flex
+    flex-direction column
+
+    &--selected
+        border 1px solid white
+
+    &__actions
+        margin-top .5rem
+        text-align right
+
+    &__action
+        color white
+        cursor pointer
+        margin 0 .5rem
+
+    &__title
+        margin-bottom .5rem
+        font-size 1.3rem
+
+    &__thumbnail
+        width 100%
+        flex 1 1 auto
+
+.location
+
+    &__item
+        margin-top .5rem

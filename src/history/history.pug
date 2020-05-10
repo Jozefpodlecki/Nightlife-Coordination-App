@@ -1,0 +1,10 @@
+.history(data-bind="page: {id: 'history', afterShow: afterShow.bind($data)}")
+    table.history__table
+        thead
+            tr.history__headerRow
+                th.history__headerColumn Date
+                th.history__headerColumn Bar
+        tbody(data-bind="foreach: activities")
+            tr.history__row
+                td.history__column(data-bind="text: date")
+                td.history__column(data-bind="text: bar")

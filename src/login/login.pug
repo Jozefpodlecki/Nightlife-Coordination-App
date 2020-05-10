@@ -1,0 +1,10 @@
+.wrapper
+    .login(data-bind="page: {id: 'login', afterShow: afterShow.bind($data)}")
+        .login__header Sign In
+        form(data-bind="submit: signIn")
+            div.login__field
+                input.login__input(type="text" placeholder="Enter username..." data-bind="value: username")
+            div.login__field
+                input.login__input(type="password" placeholder="Enter password..." data-bind="value: password")
+            div.login__field
+                button.login__submit(type="submit") Sign In

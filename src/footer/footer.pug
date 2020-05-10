@@ -1,0 +1,5 @@
+footer.footer
+    .footer__author(data-bind="text: author")
+    .footer__social(data-bind="foreach: socials")
+        a.footer__socialItem(data-bind="attr: { href: href }")
+            i(data-bind="class: icon")

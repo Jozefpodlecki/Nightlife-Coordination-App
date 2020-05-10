@@ -1,0 +1,16 @@
+extends layout.pug
+
+block main
+    div.root
+        .background
+        include navbar/navbar.pug
+        include location-view-modal/location-view-modal.pug
+        h1.title(data-bind="{text: appName}")
+        .content
+            include bars/bars.pug
+            include bar/bar.pug
+            include history/history.pug
+            include login/login.pug
+
+        include footer/footer.pug
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH4nWVttFZKHEuuznQWAyURZhKazDQAqc&callback=initMap" async defer)

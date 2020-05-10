@@ -1,0 +1,48 @@
+{
+  "name": "nightlife-coordination-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack-dev-server --open",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jozefpodlecki/Nightlife-Coordination-App.git"
+  },
+  "author": "Jozef Podlecki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jozefpodlecki/Nightlife-Coordination-App/issues"
+  },
+  "homepage": "https://github.com/Jozefpodlecki/Nightlife-Coordination-App#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@types/jquery": "^3.3.38",
+    "@types/lodash": "^4.14.150",
+    "@types/node": "^13.13.5",
+    "css-loader": "^3.5.3",
+    "dotenv-webpack": "^1.7.0",
+    "file-loader": "^6.0.0",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jquery": "^3.5.1",
+    "knockout": "^3.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3",
+    "pagerjs": "^1.1.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "style-loader": "^1.2.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "ts-loader": "^7.0.3",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "yelp-fusion": "^3.0.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}

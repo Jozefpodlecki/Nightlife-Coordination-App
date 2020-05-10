@@ -1,0 +1,28 @@
+.bar(data-bind="page: {id: 'bar', afterShow: afterShow.bind($data)}")
+    include ../loader/loader.pug
+    .bar__data(data-bind="hidden: loading")
+        .bar__image(data-bind="style: {background: `url(${bar().image_url}) center center / cover no-repeat`}")
+        .bar__info(data-bind="hidden: bar().id === -1")
+            .bar__title(data-bind="text: bar().name")
+            .bar__phone
+                span.bar__icon
+                    i.fas.fa-phone(data-bind="visible: bar().phone")
+                div(data-bind="text: bar().phone")
+            .bar__city
+                span.bar__icon
+                    i.fas.fa-city
+                div(data-bind="text: `${bar().location.city}, ${bar().location.country}`")
+            .bar__address
+                span.bar__icon
+                    i.fas.fa-map-marker-alt
+                div(data-bind="foreach: bar().location.display_address")
+                    .bar__addressItem(data-bind="text: $data")
+            .bar__price
+                div(data-bind="foreach: (bar().price || '').split('')")
+                    i.fas.fa-dollar-sign
+            .bar__rating
+                div(data-bind="foreach: Array(Math.floor(bar().rating))")
+                    i.fas.fa-star
+                
+                
+    
