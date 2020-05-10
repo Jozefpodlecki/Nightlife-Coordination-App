@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = (env, argv) => {
 
   const dotenv = require('dotenv').config({path: `.env.${argv.mode}`}).parsed
+  const publicPath = ''//dotenv.BaseHref
 
   return {
     mode: 'development',  
@@ -14,7 +15,7 @@ module.exports = (env, argv) => {
       app: './src/index.ts'  
     },
     output: {
-      publicPath: '/',
+      publicPath,
       path: __dirname,
       filename: "[name].bundle.js",
     },
