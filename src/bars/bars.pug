@@ -10,7 +10,7 @@
     .list(data-bind="foreach: bars")
         .list__item.item(data-bind="css: { 'item--selected': $parent.assignedBarId() === id}")
             .item__title(data-bind="{text: name}")
-            .item__thumbnail(data-bind="style: {background: `url(${image_url}) center center / cover no-repeat`}")
+            .item__thumbnail(data-bind="style: {background: `url(${image_url || $parent.defaultImage}) center center / cover no-repeat`}")
             .item__location(data-bind="foreach: location.display_address")
                 .location__item(data-bind="text: $data")
             .item__actions

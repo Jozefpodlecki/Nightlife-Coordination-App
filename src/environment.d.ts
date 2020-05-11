@@ -7,6 +7,7 @@ declare global {
         pager: any;
         initMap: () => void;
         google: any;
+        googleMapsLoaded: Promise<unknown>
     }
 
     namespace NodeJS {

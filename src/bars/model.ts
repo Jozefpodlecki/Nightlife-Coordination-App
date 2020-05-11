@@ -8,6 +8,7 @@ import { debounce } from "lodash";
 
 export default {
     id: "bars",
+    defaultImage: require("../assets/defaultImage.jpg").default,
     bars: ko.observableArray([]),
     search: ko.observable(""),
     loading: ko.observable(true),

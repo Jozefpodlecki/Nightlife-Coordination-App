@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack-dev-server --open",
-    "build": "webpack --mode production"
+    "serve": "webpack-dev-server --open --config webpack.development.js",
+    "build:development": "webpack --config webpack.development.js",
+    "build": "webpack --config webpack.production.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "yelp-fusion": "^3.0.0"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
   }
 }

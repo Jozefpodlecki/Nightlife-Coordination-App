@@ -31,19 +31,6 @@ const initializePager = () => {
     return require('pagerjs') && window.pager as Pager;
 }
 
-window.initMap = function() {
-    const mapContainer = document.getElementById('map');
-    const data = {
-        center: {
-            lat: -34.397,
-            lng: 150.644
-        },
-        zoom: 8
-    }
-
-    //var map = new window.google.maps.Map(mapContainer, data);
-  }
-
 $(document).ready(() => {
 
     const viewModel = {
@@ -127,4 +114,9 @@ $(document).ready(() => {
                 viewModel.loggedIn(true)
             }
         })
+
+    window.googleMapsLoaded.then(_ => {
+        console.log('loaded');
+        // //var map = new window.google.maps.Map(mapContainer, data);
+    });
 })

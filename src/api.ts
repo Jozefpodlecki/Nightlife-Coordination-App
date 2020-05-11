@@ -162,6 +162,16 @@ export const getBusinesses: (options: YelpBusinessSearchOptions) => Promise<Yelp
     let query = '/search'
     let connector = '?'
 
+    if(options.latitude) {
+        query = `${query}${connector}latitude=${options.latitude}`
+        connector = '&'
+    }
+
+    if(options.longitude) {
+        query = `${query}${connector}longitude=${options.longitude}`
+        connector = '&'
+    }
+
     if(options.location) {
         query = `${query}${connector}location=${options.location}`
         connector = '&'
@@ -177,6 +187,10 @@ export const getBusinesses: (options: YelpBusinessSearchOptions) => Promise<Yelp
         })
     }).then(pr => pr.json())
 
+    if(result.error) {
+       return []
+    }
+    
     await addBusinesses(result.businesses);
     return result.businesses;
 }

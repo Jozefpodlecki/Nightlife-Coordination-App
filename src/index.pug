@@ -13,4 +13,9 @@ block main
             include login/login.pug
 
         include footer/footer.pug
+        script(type="text/javascript").
+            window.googleMapsLoaded = new Promise((resolve, reject) => {
+                window.initMap = resolve;
+            })
+            
         script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH4nWVttFZKHEuuznQWAyURZhKazDQAqc&callback=initMap" async defer)

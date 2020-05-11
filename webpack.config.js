@@ -6,11 +6,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env, argv) => {
 
+  const mode = argv.mode;
   const dotenv = require('dotenv').config({path: `.env.${argv.mode}`}).parsed
   const publicPath = ''//dotenv.BaseHref
+  
 
   return {
-    mode: 'development',  
+    mode,
     entry: {  
       app: './src/index.ts'  
     },
@@ -18,12 +20,7 @@ module.exports = (env, argv) => {
       publicPath,
       path: __dirname,
       filename: "[name].bundle.js",
-    },
-    devtool: 'source-map',
-    devServer: {  
-      contentBase: './',  
-      overlay: true
-    },  
+    }, 
     resolve: {  
       extensions: ['.js', '.ts', '.styl', 'pug']  
     }, 
